@@ -3,7 +3,7 @@ services:
   nginx:
     build: ./nginx/
     ports:
-      - 8000:80
+      - 4400:80
     volumes:
       - ./movie/:/var/www/html/
 

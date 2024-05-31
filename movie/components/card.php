@@ -38,7 +38,7 @@ function renderCard($product)
                     <a class='title-item' href='detail.php?id={$product['id']}'>{$product['name']}</a><br />
                     </div>
                     <div class='text-item'>
-                        <i>Thể loại: {$category['name']}</i><br />
+                        <i>{$category['name']}</i><br />
                     </div>
                 </a>
             </div>";

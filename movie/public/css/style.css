@@ -223,6 +223,7 @@ h1 {
 }
 
 .title-item {
+  margin-top: 10px;
   text-decoration: none;
   color: #ec5498;
   font: 18px/1.2em "WorkSans-VariableFont_wght", serif;

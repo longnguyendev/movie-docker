@@ -218,7 +218,7 @@ h1 {
   font-weight: bolder;
 }
 
-.content {
+.content-card {
   height: 40px;
 }
 
@@ -231,15 +231,24 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-rendering: optimizelegibility;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .text-item {
   color: rgb(101, 101, 101);
   text-rendering: optimizelegibility;
-  font: 18px/1.2em "WorkSans-Italic-VariableFont_wght", serif;
-  white-space: nowrap;
+  font: 14px/1.2em "WorkSans-Italic-VariableFont_wght", serif;
   overflow: hidden;
   text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .title-item-detail {
   text-decoration: none;

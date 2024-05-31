@@ -34,11 +34,11 @@ function renderCard($product)
     $content .= "
                         </div>
                     </div>
-                    <div class='content'>
+                    <div class='content-card'>
                     <a class='title-item' href='detail.php?id={$product['id']}'>{$product['name']}</a><br />
                     </div>
                     <div class='text-item'>
-                        <i>{$category['name']}</i><br />
+                        <i>{$product['description']}</i><br />
                     </div>
                 </a>
             </div>";

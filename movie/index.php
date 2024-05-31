@@ -36,7 +36,7 @@ if (isset($_POST['productId']) && isset($_POST['userId'])) {
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./public/images/home-slider-1-1.jpeg" class="d-block w-100" alt="...">
+                <img src="./public/images/home-slider-1-1.jpg" class="d-block w-100" alt="...">
                 <div class="banner-title">
                     <div class="container">
                         <h1>Register Now</h1>
@@ -46,20 +46,20 @@ if (isset($_POST['productId']) && isset($_POST['userId'])) {
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./public/images/home-slider-2-1.jpeg" class="d-block w-100" alt="...">
+                <img src="./public/images/home-slider-2-1.jpg" class="d-block w-100" alt="...">
                 <div class="banner-title">
                     <div class="container">
-                        <h1>Enjoy Dinner</h1>
+                        <h1>Enjoy Weekend</h1>
                         <h4>Booking now and get your moment</h4>
                         <a href="#" class="button">Booking Now</a>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./public/images/home-slider-3-1.jpeg" class="d-block w-100" alt="...">
-                <div class="banner-title">
+                <img src="./public/images/home-slider-3-1.jpg" class="d-block w-100" alt="...">
+                <div class="banner-title text-end">
                     <div class="container">
-                        <h1>Welcome to YOU & ME</h1>
+                        <h1>Welcome to PANDA CINEMA</h1>
                         <h4>happiness and more</h4>
                         <a href="#" class="button">Upgrade Now</a>
                     </div>
@@ -78,9 +78,9 @@ if (isset($_POST['productId']) && isset($_POST['userId'])) {
     <!-- recommend -->
     <div class="container">
         <div class="row recommend">
-            <a href="" style="text-decoration: none;">
-                <h1>Recommend To You</h1>
-            </a>
+            <p style="text-decoration: none;">
+            <h1>Gợi Ý Cho Bạn</h1>
+            </p>
             <?php
             $productsRandom = $productModel->getRandomProducts(6);
             foreach ($productsRandom as $product) {

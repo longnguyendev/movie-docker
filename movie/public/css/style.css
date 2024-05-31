@@ -223,7 +223,7 @@ h1 {
   color: #ec5498;
   font: 18px/1.2em "WorkSans-VariableFont_wght", serif;
   font-weight: bold;
-  padding: 15px 0;
+  height: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-rendering: optimizelegibility;

@@ -50,7 +50,7 @@ if (isset($_POST['id'])) {
                                     <button type="submit" class="btn btn-primary" onclick="return confirm('Do you want to remove this?')">Remove</button>
                                 </form>
 
-                                <a class="btn btn-primary" href="">Purchase</a>
+                                <a class="btn btn-primary" href="./pay.php">Purchase</a>
                             </td>
                         </tr>
                     </thead>

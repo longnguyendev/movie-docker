@@ -6,20 +6,6 @@ include 'data.php';
 //     header('location:login.php');
 // }
 
-if (isset($_POST['productId'])) {
-
-    if ($productModel->checkLike($_POST['productId'], $_SESSION['user']['id'])) {
-        $productModel->removeLike($_POST['productId'], $_SESSION['user']['id']);
-    } else {
-        $productModel->addLike($_POST['productId'], $_SESSION['user']['id']);
-    }
-}
-
-
-if (isset($_POST['idRemove'])) {
-    $productModel->deleteProduct($_POST['idRemove']);
-    header('location:index.php');
-}
 
 if (empty($_SESSION['cartgory'])) {
     $_SESSION['cartgory'] = [];

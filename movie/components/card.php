@@ -2,7 +2,9 @@
 function renderCard($product)
 {
     $productModel = new ProductModel();
-    $string  = substr($product['description'], 0, 120);
+    $categoryModel = new CatGoryModel();
+    $category = $categoryModel->getCatgoryByID($product['category_id']);
+    // $string  = substr($product['description'], 0, 120);
     $content = "<div class='col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-5 card-item' data-name='{$product['name']}'>
                 <a class='recommend-item' href='film.php?id={$product['id']}' >
                     <div class='img-item' style='background-image: url(./public/images/{$product['image']})'>
@@ -34,7 +36,7 @@ function renderCard($product)
                     </div>
                     <a class='title-item' href='detail.php?id={$product['id']}'>{$product['name']}</a><br />
                     <div class='text-item'>
-                        <i>$string</i><br />
+                        <i>Thể loại: $category</i><br />
                     </div>
                 </a>
             </div>";

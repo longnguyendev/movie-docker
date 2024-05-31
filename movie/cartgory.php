@@ -27,7 +27,7 @@ if (isset($_POST['id'])) {
             <thead>
                 <tr>
                     <th scope="col">NAME</th>
-                    <th scope="col">PHONE NUMBER</th>
+                    <th scope="col">CATEGORY</th>
                     <th scope="col">PRICE</th>
                     <th scope="col">ACTION</th>
                 </tr>
@@ -37,11 +37,12 @@ if (isset($_POST['id'])) {
                 <?php
                 foreach ($_SESSION['cartgory'] as $value) {
                     $product = $productModel->getProductByID("{$value}");
+                    $category = $categoryModel->getCatgoryByID($product['category_id'])
                 ?>
                     <thead>
                         <tr>
                             <td scope="col"><a style="text-decoration: none;" href="<?php echo "film.php?id={$value}" ?>"><?php echo $product['name'] ?></a></td>
-                            <td scope="col"><?php echo $product['phone_number'] ?></td>
+                            <td scope="col"><?php echo $category['name'] ?></td>
                             <td scope="col"><?php echo $product['price'] ?></td>
                             <td scope="col">
                                 <form action="" method="post" style="display: inline-block;">

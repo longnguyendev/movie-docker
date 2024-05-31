@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once(__DIR__ . './config/database.php');
+require_once __DIR__ . './config/database.php';
 // autoloading
 spl_autoload_register(function ($className) {
-    require_once(__DIR__ . "./models/$className.php");
+    require_once __DIR__ . "./models/$className.php";
 });
 // require_once __DIR__ . '/config/database.php';
 // require_once __DIR__ . '/models/Model.php';

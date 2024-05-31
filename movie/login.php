@@ -1,4 +1,5 @@
 <?php
+ob_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include 'data.php';
@@ -11,7 +12,6 @@ $notication = "";
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $user = $userModel->login($_POST['username'], $_POST['password']);
     if ($user != null) {
-        echo "Logged in successfully";
         $_SESSION['user'] = $user;
         header('location:index.php');
     } else {
@@ -46,7 +46,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             <input type="password" id="password" name="password" autocomplete="new-password" required />
             <label for="password">Password</label>
         </div>
-        <?php echo $notication ?>
+        <?php if (isset($notication)) {
+            echo $notication;
+        } ?>
         <button type="submit">Login</button>
         <p>Don't have account? <a href="./register.php">Sign Up</a></p>
     </form>

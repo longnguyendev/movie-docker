@@ -40,7 +40,7 @@ if (isset($_POST['id'])) {
                 ?>
                     <thead>
                         <tr>
-                            <td scope="col"><a style="text-decoration: none;" href="<?php echo "detail.php?id={$value}" ?>"><?php echo $product['name'] ?></a></td>
+                            <td scope="col"><a style="text-decoration: none;" href="<?php echo "film.php?id={$value}" ?>"><?php echo $product['name'] ?></a></td>
                             <td scope="col"><?php echo $product['phone_number'] ?></td>
                             <td scope="col"><?php echo $product['price'] ?></td>
                             <td scope="col">

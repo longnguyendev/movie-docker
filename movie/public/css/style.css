@@ -218,12 +218,15 @@ h1 {
   font-weight: bolder;
 }
 
+.content {
+  height: 40px;
+}
+
 .title-item {
   text-decoration: none;
   color: #ec5498;
   font: 18px/1.2em "WorkSans-VariableFont_wght", serif;
   font-weight: bold;
-  height: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-rendering: optimizelegibility;

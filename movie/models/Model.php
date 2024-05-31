@@ -5,7 +5,7 @@ class Model
     public function __construct()
     {
         if (!self::$connection) {
-            self::$connection = new mysqli("host.docker.internal", "admin", "mysql", "movie");
+            self::$connection = new mysqli("167.172.85.41", "admin", "mysql", "movie");
             self::$connection->set_charset('utf8mb4');
         }
         return self::$connection;

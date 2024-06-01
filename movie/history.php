@@ -30,6 +30,7 @@ $histories = $billModel->getBillsByUser($_SESSION['user']['id']);
         <table class="table table-dark mt-5">
             <thead>
                 <tr>
+                    <th scope="col">Ngày đặt vé</th>
                     <th scope="col">Tên Phim</th>
                     <th scope="col">Số ghế</th>
                     <th scope="col">Rạp</th>
@@ -44,6 +45,7 @@ $histories = $billModel->getBillsByUser($_SESSION['user']['id']);
                 ?>
                     <thead>
                         <tr>
+                            <td scope="col"><?php echo $bill['created_at'] ?></td>
                             <td scope="col"><?php echo $bill['name'] ?></td>
                             <td scope="col"><?php echo $bill['seats'] ?></td>
                             <td scope="col"><?php echo $bill['address'] ?></td>

@@ -2,8 +2,8 @@
     <div class="top-contact">
         <div class="container">
             <ul class="top-contact-list">
-                <li><a href="" class="email-contact"><i class="fa-solid fa-envelope"></i> mail@gmail.com</a></li>
-                <li><a href="" class="phone-number"><i class="fa-solid fa-phone-flip"></i> +88 0167234</a></li>
+                <li><a href="" class="email-contact"><i class="fa-solid fa-envelope"></i> cs.pandacinema@gmail.com</a></li>
+                <li><a href="" class="phone-number"><i class="fa-solid fa-phone-flip"></i> +84 0123456789</a></li>
             </ul>
 
         </div>
@@ -66,7 +66,7 @@
                                     }
                                     ?>
                                     <!-- <li><a class="dropdown-item" href="#">Action</a></li> -->
-                                    <li><a class="dropdown-item" href="history.php">Lịch sử mua hàng</a></li>
+                                    <li><a class="dropdown-item" href="history.php">History</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>

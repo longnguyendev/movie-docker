@@ -2,9 +2,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include 'data.php';
-// if (!isset($_SESSION['user'])) {
-//     header('location:login.php');
-// }
+if (!isset($_SESSION['user'])) {
+    header('location:login.php');
+}
 
 if (isset($_POST['productId'])) {
 

@@ -4,9 +4,16 @@ $(document).ready(function () {
   let filmNamePay = $(".pay-movie-name");
   filmNamePay.text(`${localStorage.filmNameLocal}`);
 
+  $(".left-heading-name").text(localStorage.filmNameLocal);
+  $(".time-info").text(localStorage.timeLocal);
+  $(".day-info").text(`
+  ${localStorage.timeLocal} - ${localStorage.dayLocal}, Ngày ${localStorage.dateLocal} ${localStorage.monthLocal}
+  `);
+  $(".address-info").text(localStorage.addressLocal);
+
   let timePay = $(".pay-movie-time");
   timePay.text(`
-    ${localStorage.timeLocal} - ${localStorage.dayLocal}, ${localStorage.dateLocal}/${localStorage.monthLocal}
+    ${localStorage.timeLocal} - ${localStorage.dayLocal}, Ngày ${localStorage.dateLocal} ${localStorage.monthLocal}
     `);
 
   let addressPay = $(".pay-movie-address");
@@ -41,24 +48,52 @@ $(document).ready(function () {
   const payModal = $(".js-pay-modal");
   const payContainerModal = $(".js-pay-modal-container");
   const payClose = $(".pay-close");
+  const paybtnComplete = $(".modal-btn-wrapper");
 
   $(".radio").click(function () {
     $("#bank-error").text("");
   });
 
+  paybtnComplete.click(async function () {
+    const filmId = localStorage.filmIdLocal;
+    const userId = localStorage.userIdLocal;
+    const seats = localStorage.seatLocal;
+    const timePay = `${localStorage.timeLocal} - ${localStorage.dayLocal}, Ngày ${localStorage.dateLocal} ${localStorage.monthLocal}`;
+    console.log({ timePay });
+    const totalPrice = intPriceTicketPay - intPriceOfferPay;
+    const address = localStorage.addressLocal;
+    const formData = new FormData();
+    formData.append("userId", userId);
+    formData.append("filmId", filmId);
+    formData.append("seats", seats);
+    formData.append("timePay", timePay);
+    formData.append("totalPrice", totalPrice);
+    formData.append("address", address);
+    await fetch("/complete.php", {
+      method: "POST",
+      body: formData,
+    }).then(async (res) => {
+      const data = await res.json();
+      if (data.status_code === 200) {
+        $(".pay-modal-header").text(
+          "Thanh Toán Thành Công! Chúc quý khách xem phim vui vẻ."
+        );
+        paybtnComplete.remove();
+      } else {
+        $(".pay-modal-header").text("Có lỗi xảy ra vui lòng thử lại.");
+      }
+    });
+  });
+
   payBtn.click(function () {
-    const regexEmail =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const regexPhone = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
+    const regexPhone = /(0|[1|3|5|7|8|9])+([0-9]{8})\b/g;
 
     let nameInput = $("#paymentname");
     let phoneInput = $("#paymentphone");
-    let emailInput = $("#paymentemail");
     let bankInput = $(".radio");
 
     let nameError = $("#name-error");
     let phoneError = $("#phone-error");
-    let emailError = $("#email-error");
     let bankError = $("#bank-error");
     let stillError = false;
     let error = "";
@@ -71,15 +106,6 @@ $(document).ready(function () {
     }
 
     nameError.text(error);
-
-    if (regexEmail.test(emailInput.val())) {
-      error = "";
-    } else {
-      error = "Vui lòng nhập một email hợp lệ";
-      stillError = true;
-    }
-
-    emailError.text(error);
 
     if (regexPhone.test(phoneInput.val())) {
       error = "";
@@ -108,6 +134,7 @@ $(document).ready(function () {
         $(".modal-right").removeClass("open-qrcode");
         $(".modal-left").removeClass("move-left");
         $("html").css("overflow-y", "");
+        window.location.href = "/index.php";
       });
 
       payModal.click(function () {

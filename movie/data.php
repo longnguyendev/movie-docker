@@ -11,6 +11,8 @@ require_once __DIR__ . '/models/CartModel.php';
 require_once __DIR__ . '/models/CategoryModel.php';
 require_once __DIR__ . '/models/ProductModel.php';
 require_once __DIR__ . '/models/UserModel.php';
+require_once __DIR__ . '/models/BillModel.php';
+$billModel = new BillModel();
 $productModel = new ProductModel();
 $userModel = new UserModel();
 $categoryModel = new CatGoryModel();

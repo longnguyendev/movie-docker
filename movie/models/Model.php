@@ -4,6 +4,7 @@ class Model
     public static $connection = NULL;
     public function __construct()
     {
+        //host.docker.internal
         if (!self::$connection) {
             self::$connection = new mysqli("167.172.85.41", "admin", "mysql", "movie");
             self::$connection->set_charset('utf8mb4');

@@ -97,7 +97,7 @@ if (isset($_GET['idcart'])) {
                                             <span class="payment-info-title">Tên <br><span class="payment-error" id="name-error"></span></span>
 
                                             <div class="payment-info-form">
-                                                <input type="text" class="payment-info-form-input" id="paymentname" required placeholder=" ">
+                                                <input type="text" class="payment-info-form-input" id="paymentname" required placeholder=" " value="<?php echo $_SESSION['user']['name'] ?>">
                                                 <label for="name" class="payment-info-form-label">Tên / Name</label>
                                             </div>
 
@@ -105,16 +105,8 @@ if (isset($_GET['idcart'])) {
                                         <div class="payment-info-row">
                                             <span class="payment-info-title">Số điện thoại <br><span class="payment-error" id="phone-error"></span></span>
                                             <div class="payment-info-form">
-                                                <input type="text" class="payment-info-form-input" id="paymentphone" required placeholder=" ">
+                                                <input type="text" class="payment-info-form-input" id="paymentphone" required placeholder=" " value="<?php echo $_SESSION['user']['phone_number'] ?>">
                                                 <label for="name" class="payment-info-form-label">Số điện thoại / Phone number</label>
-                                            </div>
-
-                                        </div>
-                                        <div class="payment-info-row">
-                                            <span class="payment-info-title">Email <br><span class="payment-error" id="email-error"></span></span>
-                                            <div class="payment-info-form">
-                                                <input type="text" class="payment-info-form-input" id="paymentemail" required placeholder=" ">
-                                                <label for="name" class="payment-info-form-label" name="validateemail">Email</label>
                                             </div>
 
                                         </div>
@@ -212,27 +204,20 @@ if (isset($_GET['idcart'])) {
                         <div class="modal-left l-6 s-12">
                             <div class="modal-left-heading">
                                 <div class="left-heading-img">
-                                    <img src="https://traffic-edge52.cdn.vncdn.io/cinema/img/79249161460312584-2.jpg" alt="7vien">
+                                    <img src="https://cdn.galaxycine.vn/media/2024/5/9/stalker-500_1715240711738.jpg" alt="7vien">
                                 </div>
                                 <div class="left-heading-info">
-                                    <p class="left-heading-age"><span class="old-16">16+</span></p>
                                     <p class="left-heading-name">Bảy viên ngọc rồng siêu cấp</p>
-                                    <p class="left-heading-type">Kinh dị, gay cấn</p>
-                                    <p class="left-heading-rate"><i class="fa-solid fa-thumbs-up"></i>80%</p>
                                 </div>
                             </div>
                             <div class="left-body">
                                 <div class="left-body-info">
                                     <div class="modal-info-title">thời gian</div>
-                                    <div class="modal-info-about">19:00</div>
+                                    <div class="modal-info-about time-info">19:00</div>
                                 </div>
                                 <div class="left-body-info">
                                     <div class="modal-info-title">ngày chiếu</div>
-                                    <div class="modal-info-about">19:00</div>
-                                </div>
-                                <div class="left-body-info">
-                                    <div class="modal-info-title">độ tuổi</div>
-                                    <div class="modal-info-about">16+</div>
+                                    <div class="modal-info-about day-info">19:00</div>
                                 </div>
                                 <div class="left-body-info">
                                     <div class="modal-info-title">loại</div>
@@ -241,8 +226,7 @@ if (isset($_GET['idcart'])) {
 
                                 <div class="left-body-info-last">
                                     <div class="modal-info-title">Rạp</div>
-                                    <div class="modal-info-about">HowT Nguyễn Kiệm</div>
-                                    <div class="modal-info-about-detail">371 Nguyễn Kiệm, phường 3, quận Gò Vấp, thành phố Hồ Chí Minh</div>
+                                    <div class="modal-info-about address-info">HowT Nguyễn Kiệm</div>
                                 </div>
 
                                 <div class="modal-btn-wrapper">
@@ -252,7 +236,7 @@ if (isset($_GET['idcart'])) {
                         </div>
                         <div class="modal-right l-6 s-12">
                             <p class="pay-modal-header">
-                                Mời bạn quét mã QR để thanh toán
+                                Thanh Toán Thành Công! Chúc quý khách xem phim vui vẻ.
                             </p>
                             <div class="pay-modal-qrcode-wrapper">
                                 <div class="pay-modal-qrcode">
@@ -265,7 +249,7 @@ if (isset($_GET['idcart'])) {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="jsx-2d0bf11af0f1d0b9 inline w-6 h-6 mr-1">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" class="jsx-2d0bf11af0f1d0b9"></path>
                                 </svg>
-                                Sử dụng ứng dụng Camera hỗ trợ QR code để quét mã.
+                                Quét QR code để biết thêm chi tiết.
                             </div>
                             <div class="pay-close"><i class="fa-solid fa-xmark"></i></div>
                         </div>

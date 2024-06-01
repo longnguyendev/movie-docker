@@ -72,6 +72,8 @@ $(document).ready(function () {
   selectTimeBtn.click(function () {
     localStorage.timeLocal = $(this).text();
     localStorage.addressLocal = $(this).data("addressLocal");
+    localStorage.filmIdLocal = $(this).data("id");
+    localStorage.userIdLocal = $(this).data("userId");
   });
 
   // Khởi tạo ngày mặc định

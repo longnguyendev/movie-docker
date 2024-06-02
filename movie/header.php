@@ -47,8 +47,8 @@
                         } ?>
                         <?php if (isset($_SESSION['user'])) { ?>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="login.php" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="user"> <?php echo substr($_SESSION['user']['name'], 0, 20) ?>
-                                </a>
+                                <p class="nav-link dropdown-toggle" href="login.php" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="user"> <?php echo substr($_SESSION['user']['name'], 0, 20) ?>
+                                </p>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <?php
                                     if (isset($_SESSION['user']) && $_SESSION['user']['role'] == "admin") { ?>

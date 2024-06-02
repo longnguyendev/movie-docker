@@ -3,7 +3,7 @@ class BillModel extends Model
 {
     public function getBillsByUser($id)
     {
-        $sql = parent::$connection->prepare('SELECT bill.created_at, user.name, product.name, seats, address, timePay, totalPrice FROM user INNER JOIN bill ON user.id = ? INNER JOIN product on product.id = bill.product_id where user.id = ? ORDER BY bill.created_at DESC');
+        $sql = parent::$connection->prepare('SELECT bill.created_at, user.name, product.name, seats, address, timePay, totalPrice FROM user INNER JOIN bill ON user.id = bill.user_id INNER JOIN product on product.id = bill.product_id where user.id = ? ORDER BY bill.created_at DESC');
         $sql->bind_param("s", $id);
         $items = [];
         $sql->execute();

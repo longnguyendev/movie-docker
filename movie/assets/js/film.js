@@ -116,10 +116,10 @@ $(document).ready(function () {
   });
 
   // Tạo ảnh + tên phim bằng biến localStorage
-  let filmNameFilm = $(".detail__infor-name");
-  filmNameFilm.text(localStorage.filmNameLocal);
-  $(".film-booking__schedule-img").attr("src", localStorage.filmImageLocal);
-  $(".detail__infor-type").text(localStorage.filmTypeLocal);
+  // let filmNameFilm = $(".detail__infor-name");
+  // filmNameFilm.text(localStorage.filmNameLocal);
+  // $(".film-booking__schedule-img").attr("src", localStorage.filmImageLocal);
+  // $(".detail__infor-type").text(localStorage.filmTypeLocal);
 });
 
 function getLocalDayVar(place) {

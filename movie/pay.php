@@ -260,10 +260,12 @@ if (isset($_GET['idcart'])) {
         </footer>
     </div>
 
-    <!-- Javascript -->
-    <script src="./assets/js/pay.js"></script>
-    <script src="./assets/js/base.js"></script>
     <?php include 'footer.php' ?>
+    <!-- Javascript -->
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/app.js"></script>
+    <script src="./assets/js/base.js"></script>
+    <script src="./assets/js/pay.js"></script>
 </body>
 
 </html>

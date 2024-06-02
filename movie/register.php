@@ -4,7 +4,6 @@ $notication = "";
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['gender']) && isset($_POST['password'])) {
     $user = $userModel->createUser($_POST['fullName'], $_POST['gender'], $_POST['dob'], $_POST['username'], $_POST['password']);
     if ($user != null) {
-        echo "Logged in successfully";
         $_SESSION['user'] = $user;
         header('location:index.php');
     } else {

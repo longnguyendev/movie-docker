@@ -38,7 +38,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         <h1>Login</h1>
         <div class="input-group">
             <input type="text" id="username" name="username" required />
-            <label for="username">Username</label>
+            <label for="username">Phone number</label>
         </div>
 
         <div class="input-group">

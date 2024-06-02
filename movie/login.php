@@ -3,12 +3,10 @@ ob_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include 'data.php';
+$notication = "";
 if (isset($_SESSION['user']['name'])) {
     header('location:index.php');
 }
-
-$notication = "";
-
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $user = $userModel->login($_POST['username'], $_POST['password']);
     if ($user != null) {

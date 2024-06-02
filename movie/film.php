@@ -2,9 +2,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include 'data.php';
-// if (!isset($_SESSION['user'])) {
-//     header('location:login.php');
-// }
+$userId = "-1";
+if (isset($_SESSION['user'])) {
+
+    $userId = $_SESSION['user']['id'];
+}
 
 if (isset($_POST['productId'])) {
 
@@ -228,28 +230,28 @@ if (isset($_GET['idcart'])) {
                                     <div class="film-booking__time">
                                         <div class="row">
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Nguyễn Kiệm">8:00</a>
+                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Nguyễn Kiệm">8:00</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Nguyễn Kiệm">9:10</a>
+                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Nguyễn Kiệm">9:10</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Nguyễn Kiệm">10:40</a>
+                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Nguyễn Kiệm">10:40</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Nguyễn Kiệm">15:00</a>
+                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Nguyễn Kiệm">15:00</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Nguyễn Kiệm">19:00</a>
+                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Nguyễn Kiệm">19:00</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Nguyễn Kiệm">20:00</a>
+                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Nguyễn Kiệm">20:00</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Nguyễn Kiệm">21:20</a>
+                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Nguyễn Kiệm">21:20</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Nguyễn Kiệm">22:30</a>
+                                                <a href="" class="film-booking__time-wrapper film-booking__time-text" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Nguyễn Kiệm">22:30</a>
                                             </div>
                                         </div>
                                     </div>
@@ -270,40 +272,40 @@ if (isset($_GET['idcart'])) {
                                     <div class="film-booking__time">
                                         <div class="row ">
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">8:30</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">8:30</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">9:40</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">9:40</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">10:45</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">10:45</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">12:30</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">12:30</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">15:15</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">15:15</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">17:25</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">17:25</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">19:10</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">19:10</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">19:30</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">19:30</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">20:30</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">20:30</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">21:10</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">21:10</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">22:00</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">22:00</a>
                                             </div>
                                             <div class="col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Bùi Viện">22:30</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Bùi Viện">22:30</a>
                                             </div>
                                         </div>
                                     </div>
@@ -324,49 +326,49 @@ if (isset($_GET['idcart'])) {
                                     <div class="film-booking__time">
                                         <div class="row ">
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">08:30</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">08:30</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">09:45</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">09:45</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">11:00</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">11:00</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">12:35</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">12:35</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">14:10</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">14:10</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">15:15</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">15:15</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">16:45</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">16:45</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">17:10</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">17:10</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">19:00</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">19:00</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">19:45</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">19:45</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">20:30</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">20:30</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">21:00</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">21:00</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">21:45</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">21:45</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">22:07</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">22:07</a>
                                             </div>
                                             <div class="col--6 col-lg-2 col-sm-4 col-md-3">
-                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $_SESSION['user']['id'] ?>" data-address-local="Panda Vincom Thủ Đức">22:30</a>
+                                                <a href="" class="film-booking__time-wrapper" data-id="<?php echo $_GET['id'] ?>" data-user-id="<?php echo $userId ?>" data-address-local="Panda Vincom Thủ Đức">22:30</a>
                                             </div>
                                         </div>
                                     </div>
@@ -436,8 +438,10 @@ if (isset($_GET['idcart'])) {
     </div>
     <?php include 'footer.php' ?>
     <!-- Javascript -->
-    <script src="./assets/js/film.js"></script>
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/app.js"></script>
     <script src="./assets/js/base.js"></script>
+    <script src="./assets/js/film.js"></script>
 
 </body>
 

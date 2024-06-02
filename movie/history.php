@@ -7,7 +7,7 @@ if (isset($_POST['id'])) {
     header('location: cartgory.php');
 }
 
-$histories = $billModel->getBillsByUser(2);
+$histories = $billModel->getBillsByUser($_SESSION['user']['id']);
 
 
 ?>

@@ -22,7 +22,8 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['gend
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="./public/css/styleRegister.css">
-    <title>Register</title>
+    <link rel="shortcut icon" href="./assets/img/panda.png">
+    <title>Đăng kí</title>
 </head>
 
 <body>

@@ -33,7 +33,8 @@ if (isset($_POST['fullname'])  && isset($_POST['phone_number']) && isset($_POST[
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
-    <title>Edit User</title>
+    <link rel="shortcut icon" href="./assets/img/panda.png">
+    <title><?php echo $user['name'] ?></title>
 </head>
 
 <body>

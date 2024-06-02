@@ -31,7 +31,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="./public/css/styleLogin.css">
-    <title>Login</title>
+    <link rel="shortcut icon" href="./assets/img/panda.png">
+    <title>Đăng nhập</title>
 </head>
 
 <body>

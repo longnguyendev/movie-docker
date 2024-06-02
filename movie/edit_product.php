@@ -46,7 +46,9 @@ if (isset($_POST['name'])  && isset($_POST['description']) && isset($_POST['pric
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
-    <title>Edit Product</title>
+    <link rel="shortcut icon" href="./assets/img/panda.png">
+    <title><?php echo $product['name'] ?></title>
+</head>
 </head>
 
 <body>

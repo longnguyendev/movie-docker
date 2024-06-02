@@ -36,6 +36,7 @@ if (isset($_POST['productId']) && isset($_POST['userId'])) {
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/panda.png">
     <title><?php echo $_GET['category'] ?></title>
 </head>
 

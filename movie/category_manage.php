@@ -15,7 +15,8 @@ if (isset($_POST['id'])) {
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
-    <title>Cartgory Manage</title>
+    <link rel="shortcut icon" href="./assets/img/panda.png">
+    <title>Category Manage</title>
 </head>
 
 <body>

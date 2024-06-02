@@ -38,7 +38,7 @@ if (isset($_POST['productId']) && isset($_POST['userId'])) {
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
-    <title>Find <?php echo $key = $_GET['key']; ?></title>
+    <title>Tìm kiếm <?php echo $key = $_GET['key']; ?></title>
 </head>
 
 <body>
@@ -48,7 +48,7 @@ if (isset($_POST['productId']) && isset($_POST['userId'])) {
     ?>
     <div class="container">
         <div class="row mt-5">
-            <h1>RESULT FOR "<?php echo $key ?>"</h1>
+            <h1>Kết quả cho "<?php echo $key ?>"</h1>
             <?php
             for ($i = $start; $i < ($start + $perPage) && $i < $count; $i++) {
                 renderCard($searchproducts[$i]);

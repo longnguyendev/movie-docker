@@ -21,7 +21,8 @@ $histories = $billModel->getBillsByUser($_SESSION['user']['id']);
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
-    <title>Cartgory</title>
+    <link rel="shortcut icon" href="./assets/img/panda.png">
+    <title>Lịch sử mua hàng</title>
 </head>
 
 <body>

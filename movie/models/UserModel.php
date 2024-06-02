@@ -27,7 +27,7 @@ class UserModel extends Model
     public function getUsersByPhoneNumber($phone_number)
     {
         $sql = parent::$connection->prepare("SELECT * FROM user WHERE phone_number = ?");
-        $sql->bind_param("i", $phone_number);
+        $sql->bind_param("s", $phone_number);
         $items = [];
         $sql->execute();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);

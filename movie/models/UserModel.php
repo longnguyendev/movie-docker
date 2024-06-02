@@ -31,7 +31,10 @@ class UserModel extends Model
         $items = [];
         $sql->execute();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
-        return $items[0];
+        if (count($items) != 0) {
+            return $items[0];
+        }
+        return null;
     }
 
     public function login($username, $password)

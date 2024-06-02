@@ -81,7 +81,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['gend
             </select>
         </div>
 
-        <?php echo $notication ?>
+        <?php if (isset($notication)) echo $notication ?>
         <button type="submit" id="submit">Register</button>
         <p>You have account? <a href="./login.php">login</a></p>
     </form>
